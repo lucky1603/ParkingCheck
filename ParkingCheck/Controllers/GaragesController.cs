@@ -15,7 +15,7 @@ namespace ParkingCheck.Controllers
         public GaragesController() : base()
         {
             garages = Repository.Current;
-            GarageDataCollector collector = new GarageDataCollector(garages);
+            //GarageDataCollector collector = new GarageDataCollector(garages);
         }
 
         // GET: api/Garages

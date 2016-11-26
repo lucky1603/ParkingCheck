@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 
 namespace ParkingCheck.Models
@@ -9,6 +10,7 @@ namespace ParkingCheck.Models
     {
         private List<Garage> data;
         private static Repository repo;
+        private Timer refreshTimer;
 
         static Repository()
         {
@@ -152,8 +154,10 @@ namespace ParkingCheck.Models
             {
                 data.Add(g);
             }
-        }
 
+            this.refreshTimer = new Timer(refresh, null, 1000, 30000);
+        }
+        
         public IEnumerable<Garage> GetAll()
         {
             return data;
@@ -176,6 +180,11 @@ namespace ParkingCheck.Models
             {
                 garage.PlacesFree = places;
             }
+        }
+
+        private void refresh(object state)
+        {
+            new GarageDataCollector(this);
         }
     }
 }
