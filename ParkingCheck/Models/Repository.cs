@@ -145,7 +145,117 @@ namespace ParkingCheck.Models
                     Address = "Tadeuša Košćuška",
                     Latitude = 44.828747,
                     Longitude = 20.4551426
-                }
+                },
+                new Garage
+                {
+                    Id = 13,
+                    Name = "Parkiralište - VMA",
+                    PlacesTotal = 565,
+                    PlacesFree = 267,
+                    Address = "Crnotravska 17",
+                    Latitude = 44.764389,
+                    Longitude = 20.467162
+                },
+                new Garage
+                {
+                    Id = 14,
+                    Name = "Parkiralište - Donji grad",
+                    PlacesTotal = 392,
+                    PlacesFree = 0,
+                    Address = "Karađorđeva 2-4",
+                    Latitude = 44.8287565,
+                    Longitude = 20.4574496
+                },
+                new Garage
+                {
+                    Id = 15,
+                    Name = "Parkiralište - Kalemegdan",
+                    PlacesTotal = 114,
+                    PlacesFree = 0,
+                    Address = "Ulica Mali Kalemegdan bb",
+                    Latitude = 44.825656,
+                    Longitude = 20.4540042
+                },
+                new Garage
+                {
+                    Id = 16,
+                    Name = "Parkiralište - Politika",
+                    PlacesTotal = 53,
+                    PlacesFree = 0,
+                    Address = "Makedonska br. 29",
+                    Latitude = 44.8158425,
+                    Longitude = 20.4646379
+                },
+                new Garage
+                {
+                    Id = 17,
+                    Name = "Parkiralište - Kapetanija",
+                    PlacesTotal = 64,
+                    PlacesFree = 0,
+                    Address = "Kej oslobođenja 8",
+                    Latitude = 44.846858,
+                    Longitude = 20.4147816
+                },
+                new Garage
+                {
+                    Id = 18,
+                    Name = "Parkiralište - Cvetkova pijaca",
+                    PlacesTotal = 104,
+                    PlacesFree = 0,
+                    Address = "Živka Davidovića bb",
+                    Latitude = 44.7921195,
+                    Longitude = 20.5073722
+                },
+                new Garage
+                {
+                    Id = 19,
+                    Name = "Parkiralište - Viška",
+                    PlacesTotal = 95,
+                    PlacesFree = 0,
+                    Address = "Maksima Gorkog br. 2",
+                    Latitude = 44.8008582,
+                    Longitude = 20.4754928
+                },
+                new Garage
+                {
+                    Id = 20,
+                    Name = "Parkiralište - Čukarica",
+                    PlacesTotal = 78,
+                    PlacesFree = 0,
+                    Address = "Šumadijski trg 2",
+                    Latitude = 44.7824885,
+                    Longitude = 20.4158928
+                },
+                new Garage
+                {
+                    Id = 20,
+                    Name = "Parkiralište - Čukarica",
+                    PlacesTotal = 78,
+                    PlacesFree = 0,
+                    Address = "Šumadijski trg 2",
+                    Latitude = 44.7824885,
+                    Longitude = 20.4158928
+                },
+                new Garage
+                {
+                    Id = 21,
+                    Name = "Parkiralište - Kamenička",
+                    PlacesTotal = 95,
+                    PlacesFree = 0,
+                    Address = "Kamenička br. 8",
+                    Latitude = 44.8113095,
+                    Longitude = 20.4547915
+                },
+                new Garage
+                {
+                    Id = 22,
+                    Name = "Garaža - Botanička bašta",
+                    PlacesTotal = 244,
+                    PlacesFree = 0,
+                    Address = "Vojvode Dobrnjca 10",
+                    Latitude = 44.8159385,
+                    Longitude = 20.4746546
+                },
             };
 
             this.data = new List<Garage>();
