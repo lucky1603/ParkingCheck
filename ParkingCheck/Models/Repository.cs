@@ -31,7 +31,7 @@ namespace ParkingCheck.Models
             {
                 new Garage {
                     Id = 1,
-                    Name = "Garaža - Obilićev venac",
+                    Name = "Obilićev venac",
                     PlacesTotal = 619,
                     PlacesFree = 0,
                     Address = "Obilićev Venac",
@@ -40,7 +40,7 @@ namespace ParkingCheck.Models
                 },
                 new Garage {
                     Id = 2,
-                    Name = "Garaža - Masarikova",
+                    Name = "Masarikova",
                     PlacesTotal = 460,
                     PlacesFree = 124, 
                     Address = "Masarikova 2",
@@ -49,7 +49,7 @@ namespace ParkingCheck.Models
                 },
                 new Garage {
                     Id = 3,
-                    Name = "Garaža - Zeleni venac",
+                    Name = "Zeleni venac",
                     PlacesTotal = 304,
                     PlacesFree = 0,
                     Address = "Kraljice Natalije 13",
@@ -59,7 +59,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 4,
-                    Name = "Garaža - Pionirski park",
+                    Name = "Pionirski park",
                     PlacesTotal = 472,
                     PlacesFree = 20,
                     Address = "Dragoslava Jovanovica 11",
@@ -69,7 +69,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 5,
-                    Name = "Parkiralište - Sava centar",
+                    Name = "Sava centar",
                     PlacesTotal = 363,
                     PlacesFree = 74,
                     Address = "Milentija Popovica 9",
@@ -79,7 +79,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 6,
-                    Name = "Parkiralište - Simpo",
+                    Name = "Simpo",
                     PlacesTotal = 136,
                     PlacesFree = 19,
                     Address = "Hadži Nikole Živkovića",
@@ -89,7 +89,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 7,
-                    Name = "Parkiralište - Aerodrom",
+                    Name = "Aerodrom",
                     PlacesTotal = 569,
                     PlacesFree = 356,
                     Address = "Aerodrom Beograd",
@@ -99,7 +99,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 8,
-                    Name = "Garaža - Vukov spomenik",
+                    Name = "Vukov spomenik",
                     PlacesTotal = 121,
                     PlacesFree = 48,
                     Address = "Vukov Spomenik",
@@ -109,7 +109,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 9,
-                    Name = "Parkiralište - Ada Ciganlija",
+                    Name = "Ada Ciganlija",
                     PlacesTotal = 1580,
                     PlacesFree = 1534,
                     Address = "Ada Ciganlija",
@@ -119,7 +119,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 10,
-                    Name = "Garaža - Dr A. Kostića",
+                    Name = "Dr A. Kostića",
                     PlacesTotal = 59,
                     PlacesFree = 53,
                     Address = "Dr Aleksandra Kostića ",
@@ -129,7 +129,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 11,
-                    Name = "Parkiralište - Slavija",
+                    Name = "Slavija",
                     PlacesTotal = 111,
                     PlacesFree = 0,
                     Address = "Trg Dimitrija Tucovića",
@@ -139,7 +139,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 12,
-                    Name = "Parkiralište - Milan Gale Muškatirović",
+                    Name = "Milan Gale Muškatirović",
                     PlacesTotal = 302,
                     PlacesFree = 267,
                     Address = "Tadeuša Košćuška",
@@ -149,7 +149,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 13,
-                    Name = "Parkiralište - VMA",
+                    Name = "VMA",
                     PlacesTotal = 565,
                     PlacesFree = 267,
                     Address = "Crnotravska 17",
@@ -159,7 +159,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 14,
-                    Name = "Parkiralište - Donji grad",
+                    Name = "Donji grad",
                     PlacesTotal = 392,
                     PlacesFree = 0,
                     Address = "Karađorđeva 2-4",
@@ -169,7 +169,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 15,
-                    Name = "Parkiralište - Kalemegdan",
+                    Name = "Kalemegdan",
                     PlacesTotal = 114,
                     PlacesFree = 0,
                     Address = "Ulica Mali Kalemegdan bb",
@@ -179,7 +179,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 16,
-                    Name = "Parkiralište - Politika",
+                    Name = "Politika",
                     PlacesTotal = 53,
                     PlacesFree = 0,
                     Address = "Makedonska br. 29",
@@ -189,7 +189,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 17,
-                    Name = "Parkiralište - Kapetanija",
+                    Name = "Kapetanija",
                     PlacesTotal = 64,
                     PlacesFree = 0,
                     Address = "Kej oslobođenja 8",
@@ -199,7 +199,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 18,
-                    Name = "Parkiralište - Cvetkova pijaca",
+                    Name = "Cvetkova pijaca",
                     PlacesTotal = 104,
                     PlacesFree = 0,
                     Address = "Živka Davidovića bb",
@@ -209,7 +209,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 19,
-                    Name = "Parkiralište - Viška",
+                    Name = "Viška",
                     PlacesTotal = 95,
                     PlacesFree = 0,
                     Address = "Maksima Gorkog br. 2",
@@ -219,7 +219,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 20,
-                    Name = "Parkiralište - Čukarica",
+                    Name = "Čukarica",
                     PlacesTotal = 78,
                     PlacesFree = 0,
                     Address = "Šumadijski trg 2",
@@ -229,7 +229,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 20,
-                    Name = "Parkiralište - Čukarica",
+                    Name = "Čukarica",
                     PlacesTotal = 78,
                     PlacesFree = 0,
                     Address = "Šumadijski trg 2",
@@ -239,7 +239,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 21,
-                    Name = "Parkiralište - Kamenička",
+                    Name = "Kamenička",
                     PlacesTotal = 95,
                     PlacesFree = 0,
                     Address = "Kamenička br. 8",
@@ -249,7 +249,7 @@ namespace ParkingCheck.Models
                 new Garage
                 {
                     Id = 22,
-                    Name = "Garaža - Botanička bašta",
+                    Name = "Botanička bašta",
                     PlacesTotal = 244,
                     PlacesFree = 0,
                     Address = "Vojvode Dobrnjca 10",

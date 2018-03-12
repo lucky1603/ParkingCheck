@@ -30,20 +30,38 @@ namespace ParkingCheck.Models
                 //string b = fields[1].InnerText;
 
                 // II varijanta
-                HtmlNodeCollection tableFields = tableRow.SelectNodes(".//td");
-                string strGarageName = tableFields[0].InnerText;
-                strGarageName = strGarageName.Replace("„", "- ");
-                strGarageName = strGarageName.Replace("&#8221;", "");
-                strGarageName = strGarageName.Replace("&#8220;", "");
+                //HtmlNodeCollection tableFields = tableRow.SelectNodes(".//td");
+                //string strGarageName = tableFields[0].InnerText;
+                //strGarageName = strGarageName.Replace("„", "- ");
+                //strGarageName = strGarageName.Replace("&#8221;", "");
+                //strGarageName = strGarageName.Replace("&#8220;", "");
 
-                string d = tableFields[1].InnerText;
-                int placesFree = Int32.Parse(d);
+                //string d = tableFields[1].InnerText;
+                //int placesFree = Int32.Parse(d);
 
-                Garage garage = repo.GetByName(strGarageName);
-                if (garage != null)
+
+                // III Varijanta
+                HtmlNodeCollection garageNodes = tableRow.SelectNodes(".//td");
+                foreach(HtmlNode garageNode in garageNodes)
                 {
-                    garage.PlacesFree = placesFree;
-                }                
+                    HtmlNode garageNameNode = garageNode.SelectSingleNode(".//h5");
+                    if (garageNameNode == null)
+                        continue;
+
+                    String garageName = garageNameNode.InnerText;
+
+                    HtmlNode garageFreePlacesNode = garageNode.SelectSingleNode(".//h2");
+                    String freePlaces = garageFreePlacesNode.InnerText;
+
+                    Garage garage = repo.GetByName(garageName);
+                    if (garage != null)
+                    {
+                        garage.PlacesFree = Int32.Parse(freePlaces);
+                    }
+
+                }
+
+                               
             }
         }
     }
