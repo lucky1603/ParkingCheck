@@ -225,17 +225,7 @@ namespace ParkingCheck.Models
                     Address = "Šumadijski trg 2",
                     Latitude = 44.7824885,
                     Longitude = 20.4158928
-                },
-                new Garage
-                {
-                    Id = 20,
-                    Name = "Čukarica",
-                    PlacesTotal = 78,
-                    PlacesFree = 0,
-                    Address = "Šumadijski trg 2",
-                    Latitude = 44.7824885,
-                    Longitude = 20.4158928
-                },
+                },                
                 new Garage
                 {
                     Id = 21,
