@@ -1,68 +1,59 @@
 ﻿using HtmlAgilityPack;
+using ParkingCheck.Overrides;
 using System;
+using System.Net;
 
 namespace ParkingCheck.Models
 {
-    public class GarageDataCollector
+    public static class GarageDataCollector
     {
-        private string address = "http://parking-servis.co.rs/lat/gde-mogu-da-parkiram/";
-
-        public GarageDataCollector(Repository repo, string address = null)
-        { 
-            if(address != null)
-            {
-                this.address = address;
-            }        
+        public static bool WORKING = false;
                 
-            this.SyncData(repo);
-        }
-        
-        private void SyncData(Repository repo)
+        public static void SyncData(Repository repo, string address)
         {
-            HtmlWeb web = new HtmlWeb();            
-            HtmlDocument doc = web.Load(this.address);
-            
-            foreach (HtmlNode tableRow in doc.DocumentNode.SelectNodes("//div[@class=\"table-1\"]/table/tbody/tr"))
+            ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
+
+            WORKING = true;
+            //HtmlWeb web = new HtmlWeb();            
+            //HtmlDocument doc = web.Load(this.address);
+            //WebClient client = new WebClient();    
+                                
+            try
             {
-                // I varijanta
-                //var fields = tableRow.ChildNodes.Where(id => id.Name == "td").ToArray();
-                //string a = fields[0].InnerText;
-                //string b = fields[1].InnerText;
-
-                // II varijanta
-                //HtmlNodeCollection tableFields = tableRow.SelectNodes(".//td");
-                //string strGarageName = tableFields[0].InnerText;
-                //strGarageName = strGarageName.Replace("„", "- ");
-                //strGarageName = strGarageName.Replace("&#8221;", "");
-                //strGarageName = strGarageName.Replace("&#8220;", "");
-
-                //string d = tableFields[1].InnerText;
-                //int placesFree = Int32.Parse(d);
-
-
-                // III Varijanta
-                HtmlNodeCollection garageNodes = tableRow.SelectNodes(".//td");
-                foreach(HtmlNode garageNode in garageNodes)
+                WebClient client = new MyWebClient();
+                var data = client.DownloadString(address);
+                HtmlDocument doc = new HtmlDocument();
+                doc.LoadHtml(data);
+            
+                foreach (HtmlNode tableRow in doc.DocumentNode.SelectNodes("//div[@class=\"table-1\"]/table/tbody/tr"))
                 {
-                    HtmlNode garageNameNode = garageNode.SelectSingleNode(".//h5");
-                    if (garageNameNode == null)
-                        continue;
-
-                    String garageName = garageNameNode.InnerText;
-
-                    HtmlNode garageFreePlacesNode = garageNode.SelectSingleNode(".//h2");
-                    String freePlaces = garageFreePlacesNode.InnerText;
-
-                    Garage garage = repo.GetByName(garageName);
-                    if (garage != null)
+                    // III Varijanta
+                    HtmlNodeCollection garageNodes = tableRow.SelectNodes(".//td");
+                    foreach(HtmlNode garageNode in garageNodes)
                     {
-                        garage.PlacesFree = Int32.Parse(freePlaces);
-                    }
+                        HtmlNode garageNameNode = garageNode.SelectSingleNode(".//h5");
+                        if (garageNameNode == null)
+                            continue;
 
+                        String garageName = garageNameNode.InnerText;
+
+                        HtmlNode garageFreePlacesNode = garageNode.SelectSingleNode(".//h2");
+                        String freePlaces = garageFreePlacesNode.InnerText;
+
+                        Garage garage = repo.GetByName(garageName);
+                        if (garage != null)
+                        {
+                            garage.PlacesFree = Int32.Parse(freePlaces);
+                        }
+                    }                               
                 }
 
-                               
+            } catch (Exception ex)
+            {
+                string msg = ex.Message;
             }
+
+            WORKING = false;
         }
     }
 }

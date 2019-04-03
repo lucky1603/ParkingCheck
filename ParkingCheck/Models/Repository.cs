@@ -284,7 +284,10 @@ namespace ParkingCheck.Models
 
         private void refresh(object state)
         {
-            new GarageDataCollector(this);
+            if(!GarageDataCollector.WORKING)
+            {
+                GarageDataCollector.SyncData(this, "https://parking-servis.co.rs/lat/gde-mogu-da-parkiram/");
+            }            
         }
     }
 }

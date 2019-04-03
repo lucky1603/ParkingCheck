@@ -198,6 +198,9 @@
     <Compile Include="Models\Garage.cs" />
     <Compile Include="Models\GarageDataCollector.cs" />
     <Compile Include="Models\Repository.cs" />
+    <Compile Include="Overrides\MyWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
