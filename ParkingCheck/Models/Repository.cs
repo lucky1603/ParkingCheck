@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Web;
 
@@ -34,7 +35,7 @@ namespace ParkingCheck.Models
                     Name = "Obilićev venac",
                     PlacesTotal = 619,
                     PlacesFree = 0,
-                    Address = "Obilićev Venac",
+                    Address = "Obilićev venac",
                     Latitude = 44.815841,
                     Longitude = 20.4552323
                 },
@@ -270,7 +271,7 @@ namespace ParkingCheck.Models
 
         public Garage GetByName(string name)
         {
-            return data.Where(g => g.Name == name).FirstOrDefault();
+            return data.Where(g => g.Name.Contains(name)).FirstOrDefault();
         }
 
         public void UpdatePlaces(int id, int places)

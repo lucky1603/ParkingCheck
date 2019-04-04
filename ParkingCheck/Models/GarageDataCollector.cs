@@ -2,6 +2,7 @@
 using ParkingCheck.Overrides;
 using System;
 using System.Net;
+using System.Text;
 
 namespace ParkingCheck.Models
 {
@@ -14,13 +15,11 @@ namespace ParkingCheck.Models
             ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
 
             WORKING = true;
-            //HtmlWeb web = new HtmlWeb();            
-            //HtmlDocument doc = web.Load(this.address);
-            //WebClient client = new WebClient();    
                                 
             try
             {
                 WebClient client = new MyWebClient();
+                client.Encoding = Encoding.UTF8;
                 var data = client.DownloadString(address);
                 HtmlDocument doc = new HtmlDocument();
                 doc.LoadHtml(data);
@@ -35,8 +34,8 @@ namespace ParkingCheck.Models
                         if (garageNameNode == null)
                             continue;
 
-                        String garageName = garageNameNode.InnerText;
-
+                        String garageName = garageNameNode.InnerText; 
+                                                                       
                         HtmlNode garageFreePlacesNode = garageNode.SelectSingleNode(".//h2");
                         String freePlaces = garageFreePlacesNode.InnerText;
 
