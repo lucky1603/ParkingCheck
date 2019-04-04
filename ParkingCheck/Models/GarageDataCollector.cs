@@ -34,7 +34,7 @@ namespace ParkingCheck.Models
                         if (garageNameNode == null)
                             continue;
 
-                        String garageName = garageNameNode.InnerText; 
+                        String garageName = garageNameNode.InnerText.Trim(); 
                                                                        
                         HtmlNode garageFreePlacesNode = garageNode.SelectSingleNode(".//h2");
                         String freePlaces = garageFreePlacesNode.InnerText;

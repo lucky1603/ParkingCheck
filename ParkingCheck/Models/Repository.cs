@@ -43,7 +43,7 @@ namespace ParkingCheck.Models
                     Id = 2,
                     Name = "Masarikova",
                     PlacesTotal = 460,
-                    PlacesFree = 124, 
+                    PlacesFree = 124,
                     Address = "Masarikova 2",
                     Latitude = 44.807435,
                     Longitude = 20.463137
@@ -226,7 +226,7 @@ namespace ParkingCheck.Models
                     Address = "Šumadijski trg 2",
                     Latitude = 44.7824885,
                     Longitude = 20.4158928
-                },                
+                },
                 new Garage
                 {
                     Id = 21,
@@ -246,6 +246,16 @@ namespace ParkingCheck.Models
                     Address = "Vojvode Dobrnjca 10",
                     Latitude = 44.8159385,
                     Longitude = 20.4746546
+                },
+                new Garage
+                {
+                    Id = 23,
+                    Name = "Baba Višnjina",
+                    PlacesTotal = 351,
+                    PlacesFree = 0,
+                    Address = "Baba Višnjina 38-42",
+                    Latitude = 44.8011582,
+                    Longitude = 20.4719038,
                 },
             };
 
