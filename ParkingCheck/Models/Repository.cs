@@ -26,7 +26,7 @@ namespace ParkingCheck.Models
             }
         }
 
-        public Repository()
+        private Repository()
         {
             Garage[] garages = new Garage[]
             {
@@ -43,7 +43,7 @@ namespace ParkingCheck.Models
                     Id = 2,
                     Name = "Masarikova",
                     PlacesTotal = 460,
-                    PlacesFree = 124,
+                    PlacesFree = 0,
                     Address = "Masarikova 2",
                     Latitude = 44.807435,
                     Longitude = 20.463137
@@ -62,7 +62,7 @@ namespace ParkingCheck.Models
                     Id = 4,
                     Name = "Pionirski park",
                     PlacesTotal = 472,
-                    PlacesFree = 20,
+                    PlacesFree = 0,
                     Address = "Dragoslava Jovanovica 11",
                     Latitude = 44.811277,
                     Longitude = 20.463518
@@ -72,7 +72,7 @@ namespace ParkingCheck.Models
                     Id = 5,
                     Name = "Sava centar",
                     PlacesTotal = 363,
-                    PlacesFree = 74,
+                    PlacesFree = 0,
                     Address = "Milentija Popovica 9",
                     Latitude = 44.810242,
                     Longitude = 20.431451
@@ -82,7 +82,7 @@ namespace ParkingCheck.Models
                     Id = 6,
                     Name = "Simpo",
                     PlacesTotal = 136,
-                    PlacesFree = 19,
+                    PlacesFree = 0,
                     Address = "Hadži Nikole Živkovića",
                     Latitude = 44.812175,
                     Longitude = 20.452743
@@ -92,7 +92,7 @@ namespace ParkingCheck.Models
                     Id = 7,
                     Name = "Aerodrom",
                     PlacesTotal = 569,
-                    PlacesFree = 356,
+                    PlacesFree = 0,
                     Address = "Aerodrom Beograd",
                     Latitude = 44.818641,
                     Longitude = 20.288732
@@ -102,7 +102,7 @@ namespace ParkingCheck.Models
                     Id = 8,
                     Name = "Vukov spomenik",
                     PlacesTotal = 121,
-                    PlacesFree = 48,
+                    PlacesFree = 0,
                     Address = "Vukov Spomenik",
                     Latitude = 44.8047655,
                     Longitude = 20.4784268
@@ -112,7 +112,7 @@ namespace ParkingCheck.Models
                     Id = 9,
                     Name = "Ada Ciganlija",
                     PlacesTotal = 1580,
-                    PlacesFree = 1534,
+                    PlacesFree = 0,
                     Address = "Ada Ciganlija",
                     Latitude = 44.787069,
                     Longitude = 20.4130017
@@ -122,7 +122,7 @@ namespace ParkingCheck.Models
                     Id = 10,
                     Name = "Dr A. Kostića",
                     PlacesTotal = 59,
-                    PlacesFree = 53,
+                    PlacesFree = 0,
                     Address = "Dr Aleksandra Kostića ",
                     Latitude = 44.804707,
                     Longitude = 20.454867
@@ -142,7 +142,7 @@ namespace ParkingCheck.Models
                     Id = 12,
                     Name = "Milan Gale Muškatirović",
                     PlacesTotal = 302,
-                    PlacesFree = 267,
+                    PlacesFree = 0,
                     Address = "Tadeuša Košćuška",
                     Latitude = 44.828747,
                     Longitude = 20.4551426
@@ -152,7 +152,7 @@ namespace ParkingCheck.Models
                     Id = 13,
                     Name = "VMA",
                     PlacesTotal = 565,
-                    PlacesFree = 267,
+                    PlacesFree = 0,
                     Address = "Crnotravska 17",
                     Latitude = 44.764389,
                     Longitude = 20.467162
